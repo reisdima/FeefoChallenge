@@ -1,5 +1,3 @@
-import { faBold } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import styled from "styled-components"
 
 export const Overview = ({ data }) => {
@@ -47,9 +45,6 @@ export const Overview = ({ data }) => {
         color: gray;
     `
 
-    console.log(data);
-    console.log(data?.successfulUploads);
-    console.log(data?.uploads);
     const uploadPercentage = (data?.successfulUploads / data?.uploads) * 100;
     const linesSavedPercentage = (data?.linesSaved / data?.linesAttempted) * 100;
 
@@ -58,8 +53,7 @@ export const Overview = ({ data }) => {
         <Sale>
             <InfoBox gridColumn="span 2">
                 <Summary>
-                    <div><FontAwesomeIcon icon="fa-solid fa-upload" color="blue" /><span style={{fontSize: "1.2em", fontWeight: "bold"}}>Sales</span></div>
-                    <i class="fa-solid fa-upload"></i>
+                    <div><span style={{fontSize: "1.2em", fontWeight: "bold"}}>Sales</span></div>
                     <div>You had <span style={{fontWeight: "bold"}}>{data?.uploads} uploads</span> and <span style={{fontWeight: "bold"}}>0 lines added</span>.</div>
                 </Summary>
             </InfoBox>

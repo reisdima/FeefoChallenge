@@ -21,6 +21,7 @@ export const Header = ({ data }) => {
   
   const InformationTitle = styled.h5`
     color: gray;
+    text-align: left;
     margin-bottom: 0.5em;
   `
 
@@ -54,7 +55,7 @@ export const Header = ({ data }) => {
   `
   
     return (
-      <Wrapper alignItems="center">
+      <Wrapper alignItems="center" style={{marginBottom: '4em'}}>
         <Title>Account overview</Title>
         <Information>
           <InformationTitle>YOUR FEEFO SUPPORT CONTACT</InformationTitle>
@@ -63,8 +64,8 @@ export const Header = ({ data }) => {
             <Info>
               <Name>{name}</Name>
               <Contact>
-                <div>{email}</div>
-                <div>telefone</div>
+                <div style={{marginRight: '1em'}}>{email}</div>
+                <div>{phone}</div>
               </Contact>
             </Info>
           </Wrapper>
